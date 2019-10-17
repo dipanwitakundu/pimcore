@@ -100,7 +100,7 @@ Another useful use-case for the relation editable is a download link.
 <?php if ($this->editmode): ?>
     <?= $this->relation("myRelation"); ?>
 <?php else: ?>
-    <?php if ($this->relation("myRelation")->getElement() instanceof Asset): ?>
+    <?php if ($this->relation("myRelation")->getElement() instanceof \Pimcore\Model\Asset ): ?>
         <a href="<?= $this->relation("myRelation")->getFullPath() ?>"><?= $this->translate("Download") ?></a>
     <?php endif; ?>
 <?php endif; ?>
